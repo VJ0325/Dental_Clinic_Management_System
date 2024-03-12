@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36A5DFC7-972B-40CD-84B8-BEBFF242DAFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dental_Clinic_Management_System</RootNamespace>
+    <AssemblyName>Dental_Clinic_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common_Const.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicationCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicationCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Medication_Crystal_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medication_Crystal_Report.Designer.cs">
+      <DependentUpon>Medication_Crystal_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Crystal_Report_Treatment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crystal_Report_Treatment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lab_Details.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Lab_Details_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Lab_Details_Report.Designer.cs">
+      <DependentUpon>Lab_Details_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Lab_Crystal_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lab_Crystal_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Patient_Report_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Patient_Report_View.Designer.cs">
+      <DependentUpon>Patient_Report_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Doctor_Crystal_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Doctor_Crystal_Report.Designer.cs">
+      <DependentUpon>Doctor_Crystal_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_Clinic_Management_System_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_Clinic_Management_System_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_Clinic_Management_System_DBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_Clinic_Management_System_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_Clinic_Management_System_DBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Patient.Designer.cs">
+      <DependentUpon>frm_Add_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Doctor_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Doctor_Details.Designer.cs">
+      <DependentUpon>frm_Add_Doctor_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Employee_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Employee_Details.Designer.cs">
+      <DependentUpon>frm_Add_Employee_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Lab_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Lab_Details.Designer.cs">
+      <DependentUpon>frm_Add_Lab_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Attend_Patient_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Attend_Patient_Details.Designer.cs">
+      <DependentUpon>frm_Attend_Patient_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Doctor_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Doctor_Details.Designer.cs">
+      <DependentUpon>frm_Doctor_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Loading.Designer.cs">
+      <DependentUpon>frm_Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Prescription.Designer.cs">
+      <DependentUpon>frm_Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Search_Doctor_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Search_Doctor_Details.Designer.cs">
+      <DependentUpon>frm_Search_Doctor_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Search_Employee_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Search_Employee_Details.Designer.cs">
+      <DependentUpon>frm_Search_Employee_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Doctor_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Doctor_Details.Designer.cs">
+      <DependentUpon>frm_Update_Doctor_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Employee_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Employee_Details.Designer.cs">
+      <DependentUpon>frm_Update_Employee_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_User_Management.Designer.cs">
+      <DependentUpon>frm_User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_View_Employee_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Employee_Details.Designer.cs">
+      <DependentUpon>frm_View_Employee_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Lab_Tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Lab_Tests.Designer.cs">
+      <DependentUpon>frm_Add_Lab_Tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Specialization_Charges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Specialization_Charges.Designer.cs">
+      <DependentUpon>frm_Specialization_Charges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_View_Lab_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Lab_Details.Designer.cs">
+      <DependentUpon>frm_View_Lab_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_View_Specialization_Charges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Specialization_Charges.Designer.cs">
+      <DependentUpon>frm_View_Specialization_Charges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Dental_Application.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Dental_Application.Designer.cs">
+      <DependentUpon>MDI_Dental_Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frm_Search_Lab_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Search_Lab_Test.Designer.cs">
+      <DependentUpon>frm_Search_Lab_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_View_Doctor_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Doctor_Details.Designer.cs">
+      <DependentUpon>frm_View_Doctor_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Doctor_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Doctor_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Patient_Crystal_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Patient_Crystal_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Treatment_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Treatment_Report.Designer.cs">
+      <DependentUpon>Treatment_Report.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicationCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MedicationCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medication_Crystal_Report.resx">
+      <DependentUpon>Medication_Crystal_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Crystal_Report_Treatment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal_Report_Treatment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Details.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Lab_Details.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Lab_Details_Report.resx">
+      <DependentUpon>Lab_Details_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Lab_Crystal_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Lab_Crystal_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Patient_Report_View.resx">
+      <DependentUpon>Patient_Report_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Doctor_Crystal_Report.resx">
+      <DependentUpon>Doctor_Crystal_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Patient.resx">
+      <DependentUpon>frm_Add_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Doctor_Details.resx">
+      <DependentUpon>frm_Add_Doctor_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Employee_Details.resx">
+      <DependentUpon>frm_Add_Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Lab_Details.resx">
+      <DependentUpon>frm_Add_Lab_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Attend_Patient_Details.resx">
+      <DependentUpon>frm_Attend_Patient_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Doctor_Details.resx">
+      <DependentUpon>frm_Doctor_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Loading.resx">
+      <DependentUpon>frm_Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Prescription.resx">
+      <DependentUpon>frm_Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Search_Doctor_Details.resx">
+      <DependentUpon>frm_Search_Doctor_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Search_Employee_Details.resx">
+      <DependentUpon>frm_Search_Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Doctor_Details.resx">
+      <DependentUpon>frm_Update_Doctor_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Employee_Details.resx">
+      <DependentUpon>frm_Update_Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_User_Management.resx">
+      <DependentUpon>frm_User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Employee_Details.resx">
+      <DependentUpon>frm_View_Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Lab_Tests.resx">
+      <DependentUpon>frm_Add_Lab_Tests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Specialization_Charges.resx">
+      <DependentUpon>frm_Specialization_Charges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Lab_Details.resx">
+      <DependentUpon>frm_View_Lab_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Specialization_Charges.resx">
+      <DependentUpon>frm_View_Specialization_Charges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Dental_Application.resx">
+      <DependentUpon>MDI_Dental_Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frm_Search_Lab_Test.resx">
+      <DependentUpon>frm_Search_Lab_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Doctor_Details.resx">
+      <DependentUpon>frm_View_Doctor_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Doctor_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Doctor_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Patient_Crystal_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Patient_Crystal_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Treatment_Report.resx">
+      <DependentUpon>Treatment_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet.xsc">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_Clinic_Management_System_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet.xss">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet1.xsc">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_Clinic_Management_System_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet1.xss">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet2.xsc">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_Clinic_Management_System_DBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet2.xss">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet3.xsc">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_Clinic_Management_System_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet3.xss">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet4.xsc">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_Clinic_Management_System_DBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_Clinic_Management_System_DBDataSet4.xss">
+      <DependentUpon>Dental_Clinic_Management_System_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_2240334-stock-illustration-login-icon-button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_2240334-stock-illustration-login-icon-button1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20220117_163838.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58aff1e7829958a978a4a6ce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27734653-login-icon-button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_37223.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor_and_patient_user_icons_6822910.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-password-user-window-furniture-window-thumbnail-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dentist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20220117_173405.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20220117_1734051.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27734653-login-icon-button1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27734653-login-icon-button.jpg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87-875613_go-back-button-png-download-blue-dollar-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87-875613_go-back-button-png-download-blue-dollar-sign1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20220117_165844.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smilecure-multispeciality-dental-clinic-bangalore-58e3d6569d1a3%281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smilecure-multispeciality-dental-clinic-bangalore-58e3d6569d1a3%281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dentist1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1269563704-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dental-services-oral-health.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\41664052-doctor-with-medical-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\abc-awards-sks-bottling.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\abt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Dental_Care.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\dental-services-oral-health.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Dentist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\dentistry.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Dental_Clinic_Management_System_DBDataSet3" targetNamespace="http://tempuri.org/Dental_Clinic_Management_System_DBDataSet3.xsd" xmlns:mstns="http://tempuri.org/Dental_Clinic_Management_System_DBDataSet3.xsd" xmlns="http://tempuri.org/Dental_Clinic_Management_System_DBDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Dental_Clinic_Management_System_DBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Dental_Clinic_Management_System_DBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Dental_Clinic_Management_System.Properties.Settings.GlobalReference.Default.Dental_Clinic_Management_System_DBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Dental_Clinic_Management_System_DBDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Dental_Clinic_Management_System_DBDataSet3" msprop:Generator_UserDSName="Dental_Clinic_Management_System_DBDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
